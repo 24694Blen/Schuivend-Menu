@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Alles schuift</title>
+	<meta name="author" content="Blen Michil MD1B">
+	<meta name="viewport" content="width=device-width, initial">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+
+		#toggleMenu:checked ~ nav {
+			margin-left: 0.1px;
+        }
+
+
+        #toggleMenu:checked ~ main {
+			margin-left: 10em;
+		}
+
+        main #toggleLabel::before {
+            margin-left: 0px;
+            transition: margin-left .6s ease-out;
+
+
+        }
+
+		#toggleLabel::before{
+			content: "\2630";
+            cursor: pointer;
+            position: static;
+		}
+
+		#toggleMenu:checked ~ main #toggleLabel::before{
+            content: "\2715";
+            margin-left: 0px;
+            height: 100%;
+		}
+
+		nav{
+            position: fixed;
+            height: 100vh;
+            margin-left: -10em;
+            background-color: #333;
+            transition: margin-left .6s ease-out;
+		}
+
+		main{
+			position: absolute;
+		margin-left: 0;
+        transition: margin-left .6s ease-out;
+
+		}
+	</style>
+</head>
+<body lang="nl">
+	<input type="checkbox" id="toggleMenu">
+	<nav>
+		<h4>Menu</h4>
+		<ul>
+			<li>
+				<a href="index.html">Inhoud schuift</a>
+			</li>
+			<li>
+				<a href="menuSchuift.html" >Menu schuift</a>
+			</li>
+			<li>
+				<a href="allesSchuift.html" class="actief">Alles schuift</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<label for="toggleMenu" id="toggleLabel"></label>
+		<h1>Kikker</h1>
+		<p><img src="kikker.jpg" alt="kikker"></p>
+		<p>Kikkers (Anura) zijn een van de drie groepen van amfibieën, naast de salamanders (Caudata) en de wormsalamanders (Gymnophiona).[2] Kikkers zijn hiervan verreweg de grootste groep; van de ongeveer 7790 soorten amfibieën behoort grofweg 88% tot de kikkers. Er zijn tegenwoordig ruim 6860 verschillende soorten kikkers beschreven.[3] Kikkers hebben een vrijwel wereldwijde verspreiding en leven in sterk uiteenlopende habitats.
+
+      Kikkers behoren tot de gewervelde dieren, ze hebben vier poten maar geen staart en verschillen hiermee van de meeste andere amfibieën. Alle kikkers hebben een afgeplat, peervormig lichaam en uitpuilende ogen. De kop en bek zijn breed, de lange achterpoten zijn sterk gespierd en goed ontwikkeld. Kikkers zijn de enige dieren die een kwaakblaas hebben en hiermee soortspecifieke geluiden maken om elkaar te lokken. Net als andere amfibieën zijn kikkers koudbloedig, hierop is zowel de bloedsomloop als de ademhaling aangepast. Een aantal soorten houdt een zomerrust of winterslaap om erg warme respectievelijk koude jaargetijden te doorstaan.</p>
+		<p>Bron: <a target="_blank" href="https://nl.wikipedia.org/wiki/Kikkers">Wikipedia</a></p>
+
+
+
+
+
+
+
+
+
+		<div id="validatie">
+                <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                  <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                  <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+                </a>
+              </div>
+	</main>
+
+</body>
+</html>

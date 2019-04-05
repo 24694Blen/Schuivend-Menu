@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Schuivend menu</title>
+	<meta name="author" content="Blen Michil MD1B">
+	<meta name="viewport" content="width=device-width, initial">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		#toggleMenu:checked ~ main {
+			margin-left: 10em;
+		}
+
+		#toggleLabel::before{
+			content: "\2630";
+			cursor: pointer;
+		}
+
+		#toggleMenu:checked ~ main #toggleLabel::before{
+			content: "\2715";
+		}
+
+		nav{
+			position: fixed;
+		}
+
+		main{
+			position: absolute;
+		margin-left: 0;
+		transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+		}
+	</style>
+</head>
+<body lang="nl">
+	<input type="checkbox" id="toggleMenu">
+	<nav>
+		<h4>Menu</h4>
+		<ul>
+			<li>
+				<a href="index.html" class="actief">Inhoud schuift</a>
+			</li>
+			<li>
+				<a href="menuSchuift.html">Menu schuift</a>
+			</li>
+			<li>
+				<a href="allesSchuift.html">Alles schuift</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<label for="toggleMenu" id="toggleLabel"></label>
+		<h1>De kip</h1>
+		<p><img src="kip.jpg" alt="kippen"></p>
+		<p>De kip (Gallus gallus domesticus) of het huishoen is een zeer bekende gedomesticeerde vogelsoort uit de familie van de fazantachtigen (Phasianidae), die weer behoort tot de orde der hoendervogels (Galliformes). Deze hoendersoort is tevens de meest voorkomende vogelsoort ter wereld. Er zijn op de wereld 52 miljard kippen.
+
+    Er bestaat een zeer groot aantal rassen. Zie daarvoor de lijst van kippenrassen.
+
+    In strikte zin verwijst de naam kip specifiek naar de vrouwelijke exemplaren van deze hoendersoort, de hennen. In Nederland echter wordt de naam kip veelal gebruikt voor de soort als geheel, dus ook de hanen.</p>
+		<p>Bron: <a target="_blank" href="https://nl.wikipedia.org/wiki/Kip_(vogel)">Wikipedia</a></p>
+
+
+
+
+
+
+
+
+
+		<div id="validatie">
+                <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                  <img src="http://blog.boyet.com/blog/files/media/image/valid-html5-blue.png" alt="Valide HTML5"></a>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                  <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+                </a>
+              </div>
+	</main>
+
+</body>
+</html>
